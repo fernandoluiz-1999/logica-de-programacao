@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <script src="desafio2avinganca.js">
+const nomePessoa = prompt("Informe seu nome: ");
+
+const pesoPessoa = prompt("Qual é seu peso? ");
+
+const alturaPessoa = prompt("Qual é sua altura? ");
+
+const calcIMC = (pesoPessoa / alturaPessoa**2).toFixed(1);
+
+if (calcIMC < 18.5) {
+    alert(`${nomePessoa} tem IMC = ${calcIMC} e está abaixo do peso`)
+} else if (calcIMC >= 18.5 && calcIMC <= 24.9) {
+    alert(`${nomePessoa} tem IMC = ${calcIMC} e está normal`)
+} else if (calcIMC >= 25 && calcIMC <= 29.9) {
+    alert(`${nomePessoa} tem IMC = ${calcIMC} e está sobrepeso`)
+} else if (calcIMC >= 30 && calcIMC <= 34.4) {
+    alert(`${nomePessoa} tem IMC = ${calcIMC} e está com obesidade grau I`)
+} else if (calcIMC >= 35 && calcIMC <= 39.9) {
+    alert(`${nomePessoa} tem IMC = ${calcIMC} e está com obesidade grau II`)
+} else {
+    alert(`${nomePessoa} tem IMC = ${calcIMC} e está com obesidade grau III`)
+}
+    </script>
+</body>
+</html>
